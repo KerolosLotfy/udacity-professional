@@ -90,11 +90,11 @@ section {
     border-radius: 20px;
 }
 
-.navbar__menu .menu__link:hover {
+/* .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
-}
+} */
 
 .active{
     background-color: green;
@@ -146,11 +146,11 @@ section {
         display: none;
     }
 
-    .navbar__menu .menu__link:hover {
+    /* .navbar__menu .menu__link:hover {
         background: transparent;
         color: initial;
 
-    }
+    } */
 
 
     .menu__icon {
