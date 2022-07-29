@@ -118,7 +118,7 @@ section {
 /* ---logo (edit by me) --- */
 .logo {
     position: relative;
-    width: fit-content;
+    width: auto;
 
 }
 
@@ -137,6 +137,72 @@ section {
     transform: skew(10deg, -30deg);
     font-size: 20px;
     font-family: fantasy;
+}
+
+
+/* Responsive Nav Bar */
+@media (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar__menu .menu__link:hover {
+        background: transparent;
+        color: initial;
+
+    }
+
+
+    .menu__icon {
+        width: 30px;
+        height: 15px;
+        background-color: transparent;
+        border-top: 5px solid #000;
+        border-bottom: 5px solid #000;
+        margin: 10px 0;
+        position: relative;
+        cursor: pointer;
+    }
+
+
+    .menu__icon::before {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20%;
+        height: 4px;
+        transform: translate(0, -50%);
+        transition: all .5s;
+
+    }
+
+    .show::before {
+        width: 100%;
+    }
+
+    .show #navbar__list {
+        display: flex;
+    }
+
+    #navbar__list {
+        background-color: #fff;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        top: 35px;
+        position: absolute;
+        left: 0px;
+        border-radius: 5px;
+        justify-content: center;
+        display: none;
+    }
+
+    .secNum {
+        font-size: 20px;
+    }
+
 }
 
 /* Footer Styles */

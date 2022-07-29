@@ -35,7 +35,8 @@ const btnUp = document.querySelector('#btnUp');
 // edit section number (i)
 let secNum = document.querySelectorAll(".secNum")
 
-
+// add class for navBarList in Responsive case 
+let navIcon = document.querySelector(".menu__icon");
 
 
 /**
@@ -117,6 +118,12 @@ btnUp.addEventListener('click', function () {
     })
 });
 
+// add click event to show and hide menu icon 
+navIcon.addEventListener("click", () => {
+    navIcon.classList.toggle('show');
+
+}); 
+
 // Build menu
 
 // Scroll to section on link click
@@ -135,6 +142,11 @@ sections.forEach(section => {
 // edit postion  for even children 
 secNum.forEach((el, i) => {
     if ((i+1) % 2 === 0) { 
-        secNum[i].style.right = "87%";
+        secNum[i].style.right = "90%";
     }
 })
+
+
+
+
+
