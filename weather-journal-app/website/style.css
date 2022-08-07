@@ -1,38 +1,117 @@
 body {
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+}
+    
+body * {
+    box-sizing: border-box;
 }
 
 #app {
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height: 100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
+    grid-template-columns: 50% 50%;
+        grid-template-rows: auto 1fr 3fr;
+    color: #ffd900;
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    /* background-image: url("./images/Clouds_-_1154_AdobeExpress.gif"); */
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 50px;
 }
 
-.holder {}
+@media screen and (min-width: 800px) {
+    #app {
+
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+    }
+    .Country {
+        letter-spacing: 0px !important;
+        padding: 5px !important;
+        background-color: transparent !important;
+        
+    }
+}
+
+
+#entryHolder {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+#entryHolder div {
+    font-size: 25px;
+    color: #f0d43a;
+}
+
+i {
+    color: aqua;
+}
+
+.Country {
+    width: 100%;
+    background: #000000;
+    color: #e91e63;
+    padding: 20px;
+    border-radius: 100px 0px 100px;
+    letter-spacing: 15px;
+}
+
+
+.holder {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
 
 .entry {
     background: rgba(59, 74, 107, .4);
+    grid-area: 2/2/4/3;
+        border-radius: 30px;
+        padding: 10px;
+    
+    }
+    
+    .zip {
+        grid-area: 2/1/3/2;
+        height: 100px;
+    }
+    
+    .feel {
+        grid-area: 3/1/4/2;
 }
 
-#entryHolder {}
 
-#date {}
+.headline {
+    grid-area: 1/1/2/3;
+    text-align: center;
+    letter-spacing: 25px;
+    font-size: 30px;
+    height: auto;
+    padding: 10px;
+}
 
-#temp {}
-
-#content {}
-
-.headline {}
-
-.title {}
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #e91e63;
+}
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label {
@@ -43,23 +122,26 @@ label {
 input {
     display: block;
     height: 60px;
-    width: 320px;
-    background: #22b2da;
+    width: 100%;
+    background: rgba(59, 74, 107, .4);
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
+    text-align: center;
+    border-radius: 20px;
 }
 
 button {
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
+    background: #e91e63;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
-    box-shadow: 2px 4px 5px #444;
+    box-shadow: 2px 4px 10px #000;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 15px;
 }
 
 h1 {
@@ -67,10 +149,14 @@ h1 {
 }
 
 textarea {
-    background: #22b2da;
+    background: rgba(59, 74, 107, .4);
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
 }
 
 /* Reset style for HTML element on active to have no border*/
@@ -102,3 +188,8 @@ button:focus {
     font-family: 'Oswald', sans-serif;
 
 }
+
+
+
+
+
