@@ -43,7 +43,7 @@ an asynchronous web app that uses Web API and user data to dynamically update th
 
 ## Instructions on how to run the project :-
  1. must be downloaded node.js on your pc
- 2. run local server by write **nodemon server** or **node server**
+ 2. run local server by write `nodemon server` or `node server`
  3. enter localhost server in browsing such as **http://localhost:3030**
  4. enter zip code and your feeling then press on generate button
  5. show name of country and date and tempature and  your Feeling
